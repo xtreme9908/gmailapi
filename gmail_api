@@ -7,10 +7,10 @@ mail_password = getpass("enter your gmail password: ")
 time.sleep(0.8)
 mail_to = str(input("enter mail address of the reciever: "))
 body = str(input("write your message: "))
-mailServer = smtplib.SMTP('smtp.gmail.com',587)
+mailServer = smtplib.SMTP('smtp.gmail.com',587) // port_requestID:587
 mailServer.starttls()
 mailServer.login(mail_address , mail_password)
 mailServer.sendmail(mail_address , mail_to , body)
 print("sent")
-mailServer.quit()
+mailServer.quit() 
 
